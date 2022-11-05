@@ -1,0 +1,38 @@
+
+<mat-card class="mat-elevation-z4">
+    <mat-card-title>Lista de Produtos</mat-card-title>
+    <a routerLink="/home/cadastrarProduto">
+      <button type="button" class="btn btn-success">Novo Produto</button>
+    </a>
+
+  <p>
+  <h5>Total de registros: {{ total }}</h5> 
+  
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Qtd</th>
+        <th scope="col">Val. Aluguel</th>
+        <th scope="col">Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let produto of produtos"> 
+            <th>{{produto.id}}</th>
+            <th>{{produto.nome}}</th>
+            <th>{{produto.descricao}}</th>
+            <th>{{produto.quantidade}}</th>
+            <th>{{produto.preco}}</th>
+            <th>
+                <button type="button" (click)="editar(produto.id)" class="btn btn-warning">Editar</button>
+                <button type="button" (click)="remover(produto.id)" class="btn btn-danger">Remover</button>           
+            </th>
+      </tr>
+    </tbody>
+  </table>
+ 
+</mat-card>

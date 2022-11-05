@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-card-title>Novo Produto</mat-card-title>
+    <div class="input col-md-6"><input type="text" [(ngModel)] = "produto.nome" class="form-control" placeholder="Nome" required></div>
+    <div class="input col-md-6"><input type="text" [(ngModel)] = "produto.descricao" class="form-control" placeholder="Descricao" required></div>
+    <div class="input col-md-6"><input type="text" [(ngModel)] = "produto.quantidade" class="form-control" placeholder="Quantidade" required></div>
+    <div class="input col-md-6"><input type="text" [(ngModel)] = "produto.preco" class="form-control" placeholder="Preço" required></div>
+    <div class="input">
+      
+            <button type="submit" class="btn btn-primary" (click)='save()'>Cadastrar</button>
+      
+            <a routerLink="/home/produtos"><button type="submit" class="btn btn-danger">Cancelar</button></a>
+    
+    </div>
+</mat-card>

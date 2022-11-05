@@ -1,0 +1,27 @@
+.container{
+    width: 35%;
+    margin-top: 5%;
+}
+
+.input{
+    margin-top: 10px;
+    width: 100%;
+    
+}
+button{
+    margin-top: 10px;
+}
+.col{
+    margin-top: 30px;
+    text-align: center;
+}
+.esqueci{
+    margin-top: 10px;
+    text-align: center;
+}
+img{
+    max-width: 200px;
+}
+.row{
+    text-align: center;
+}

@@ -1,0 +1,38 @@
+
+<mat-card class="mat-elevation-z4">
+    <mat-card-title>Lista de Pedidos</mat-card-title>
+    <a routerLink="/home/cadastrarPedido">
+      <button type="button" class="btn btn-success">Novo Pedido</button>
+    </a>
+
+  <p>
+  <h5>Total de registros: {{ total }}</h5> 
+  
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Forma Pag.</th>
+        <th scope="col">Valor</th>
+        <th scope="col">Data do Pedido</th>
+        <th scope="col">Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let pedido of pedidos"> 
+            <th>{{pedido.id}}</th>
+            <th>{{pedido.cliente.nome}}</th>
+            <th>{{pedido.formaPagamento}}</th>
+            <th>R$ {{pedido.valorPedido}}</th>
+            <th>{{pedido.dataPedido}}</th>
+            <th>
+                <button type="button" (click)="editar(pedido.id)" class="btn btn-info">Detalhes</button>
+            
+            </th>
+      </tr>
+    </tbody>
+  </table>
+ 
+</mat-card>
