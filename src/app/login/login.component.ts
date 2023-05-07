@@ -30,14 +30,22 @@ export class LoginComponent implements OnInit {
       login => {
         if(login.status == 200){
          var c = login.body.token
-          console.log( c );
+         var perfil = login.body.perfil
+          console.log("token gerado: " + c);
+          console.log("perfil: " + perfil);
+          
           if( c ){
             window.localStorage.setItem("token",  c )
-            this.router.navigate(['/home']);
+            if(perfil == "ADMIN"){
+              this.router.navigate(['/home']);
+            }else{
+              this.router.navigate(['/homeAluno']);
+            }
+           
           }
         }
       }, error => {
-        alert("Usuário e/ou senha inválidos ou não encontrado")
+        alert("Usuário e/ou senha inválidos ou não encontrado!")
       }
     )
   }

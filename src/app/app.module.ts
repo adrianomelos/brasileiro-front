@@ -9,11 +9,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { SairComponent } from './sair/sair.component';
 import { MatCardModule } from '@angular/material/card';
-import { ProdutosComponent } from './produtos/produtos.component';
-import { CadastrarProdutosComponent } from './cadastrar-produtos/cadastrar-produtos.component';
-import { ClientesComponent } from './clientes/clientes.component';
-import { CadastrarClientesComponent } from './cadastrar-clientes/cadastrar-clientes.component';
-import { PedidosComponent } from './pedidos/pedidos.component';
+import { CursoComponent } from './curso/curso.component';
+import { CadastrarCursoComponent } from './cadastrar-curso/cadastrar-curso.component';
+import { AlunosComponent } from './alunos/alunos.component';
+import { CadastrarAlunoComponent } from './cadastrar-aluno/cadastrar-aluno.component';
+import { DetalhesCursoComponent } from './detalhes-curso/detalhes-curso.component';
+import { DetalhesAlunoComponent } from './detalhes-aluno/detalhes-aluno.component';
+import { HomeAlunoComponent } from './home-aluno/home-aluno.component';
 
 
 @NgModule({
@@ -22,11 +24,13 @@ import { PedidosComponent } from './pedidos/pedidos.component';
     LoginComponent,
     HomeComponent,
     SairComponent,
-    ProdutosComponent,
-    CadastrarProdutosComponent,
-    ClientesComponent,
-    CadastrarClientesComponent,
-    PedidosComponent
+    CursoComponent,
+    CadastrarCursoComponent,
+    AlunosComponent,
+    CadastrarAlunoComponent,
+    DetalhesCursoComponent,
+    DetalhesAlunoComponent,
+    HomeAlunoComponent
   ],
   imports: [
     BrowserModule,

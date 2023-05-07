@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-card-title>Novo Aluno</mat-card-title>
+    <div class="input col-md-6"><input type="text" [(ngModel)] = "aluno.nome" class="form-control" placeholder="Nome" required></div>
+    <div class="input col-md-6"><input type="text" [(ngModel)] = "aluno.cpf" class="form-control" placeholder="CPF" required></div>
+    <div class="input col-md-6"><input type="text" [(ngModel)] = "aluno.telefone" class="form-control" placeholder="Telefone" required></div>
+    <div class="input col-md-6"><input type="text" [(ngModel)] = "aluno.email" class="form-control" placeholder="Email" required></div>
+    <div class="input">
+      
+            <button type="submit" class="btn btn-primary" (click)="save()">Cadastrar</button>
+      
+            <a routerLink="/home/alunos"><button type="submit" class="btn btn-danger">Cancelar</button></a>
+    
+    </div>
+</mat-card>

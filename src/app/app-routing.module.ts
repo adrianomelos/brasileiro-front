@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CadastrarClientesComponent } from './cadastrar-clientes/cadastrar-clientes.component';
-import { CadastrarProdutosComponent } from './cadastrar-produtos/cadastrar-produtos.component';
-import { ClientesComponent } from './clientes/clientes.component';
+import { AlunosComponent } from './alunos/alunos.component';
+import { CadastrarAlunoComponent } from './cadastrar-aluno/cadastrar-aluno.component';
+import { CadastrarCursoComponent } from './cadastrar-curso/cadastrar-curso.component';
+import { CursoComponent } from './curso/curso.component';
+import { DetalhesAlunoComponent } from './detalhes-aluno/detalhes-aluno.component';
+import { DetalhesCursoComponent } from './detalhes-curso/detalhes-curso.component';
 import { GuardGuard } from './guard/guard.guard';
+import { HomeAlunoComponent } from './home-aluno/home-aluno.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { PedidosComponent } from './pedidos/pedidos.component';
-import { ProdutosComponent } from './produtos/produtos.component';
 import { SairComponent } from './sair/sair.component';
 
 const routes: Routes = [
@@ -15,14 +17,16 @@ const routes: Routes = [
   {  path: 'login',  component: LoginComponent },
   {  path: 'home',  component: HomeComponent, children: [
     {  path: 'sair',  component: SairComponent },
-    {  path: 'produtos',  component: ProdutosComponent },
-    {  path: 'clientes',  component: ClientesComponent },
-    {  path: 'pedidos',  component: PedidosComponent },
-    {  path: 'cadastrarProduto',  component: CadastrarProdutosComponent },
-    {  path: 'cadastrarProduto/:id',  component: CadastrarProdutosComponent },
-    {  path: 'cadastrarCliente',  component: CadastrarClientesComponent },
-    {  path: 'cadastrarCliente/:id',  component: CadastrarClientesComponent }
-  ], canActivate: [GuardGuard]}, 
+    {  path: 'cursos',  component: CursoComponent },
+    {  path: 'alunos',  component: AlunosComponent },
+    {  path: 'cadastrarCurso',  component: CadastrarCursoComponent },
+    {  path: 'detalheCurso/:id',  component: DetalhesCursoComponent },
+    {  path: 'detalheAluno/:id',  component: DetalhesAlunoComponent },
+    {  path: 'cadastrarAluno',  component: CadastrarAlunoComponent },
+  ],
+   canActivate: [GuardGuard]}, 
+   {  path: 'homeAluno',  component: HomeAlunoComponent, children: [],
+   canActivate: [GuardGuard]}, 
 ];
 
 @NgModule({

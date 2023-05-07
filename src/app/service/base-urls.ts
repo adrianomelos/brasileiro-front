@@ -8,15 +8,12 @@ export class BaseUrls {
         return this.base + 'login';
     }
 
-    public static get baseCliente(): string {
-        return this.base + 'cliente';
+    public static get baseCurso(): string {
+        return this.base + 'curso';
     }
 
-    public static get basePedido(): string {
-        return this.base + 'aluguel';
+    public static get baseAluno(): string {
+        return this.base + 'user';
     }
 
-    public static get baseProduto(): string {
-        return this.base + 'produto';
-    }
 }

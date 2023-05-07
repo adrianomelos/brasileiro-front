@@ -1,0 +1,33 @@
+<mat-card class="mat-elevation-z4">
+    <mat-card-title>Alunos</mat-card-title>
+    <a routerLink="/home/cadastrarAluno">
+      <button type="button" class="btn btn-success">Novo Aluno</button>
+    </a>
+
+  <p>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Cpf</th>
+        <th scope="col">Telefone</th>
+        <th scope="col">Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let aluno of alunos"> 
+            <th>{{aluno.id}}</th>
+            <th>{{aluno.nome}}</th>
+            <th>{{aluno.cpf}}</th>
+            <th>{{aluno.telefone}}</th>
+            <th>
+                <button type="button" class="btn btn-info" (click)="detalhes(aluno.id)">Detalhes</button>
+                <button type="button" class="btn btn-danger" (click)="remover(aluno.id)">Remover</button>             
+            </th>
+      </tr>
+    </tbody>
+  </table>
+ 
+</mat-card>

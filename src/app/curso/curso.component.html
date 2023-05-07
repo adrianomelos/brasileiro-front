@@ -1,0 +1,30 @@
+<mat-card class="mat-elevation-z4">
+    <mat-card-title>Cursos</mat-card-title>
+    <a routerLink="/home/cadastrarCurso">
+      <button type="button" class="btn btn-success">Novo Curso</button>
+    </a>
+
+  <p>
+  
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let curso of cursos"> 
+            <th>{{curso.id}}</th>
+            <th>{{curso.nome}}</th>
+            <th>
+                <button type="button" class="btn btn-info" (click)="detalhes(curso.id)">Detalhes</button>
+                <button type="button" (click)="remover(curso.id)" class="btn btn-danger">Remover</button>             
+            </th>
+      </tr>
+    </tbody>
+  </table>
+ 
+</mat-card>

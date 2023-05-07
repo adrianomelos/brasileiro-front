@@ -3,42 +3,25 @@ export interface Login{
     senha: string
 }
 
-export interface Cliente {
+export interface Curso{
     id: number;
-    nome: string;
-    cpf: string;
-    email: string;
-    telefone: string;
-    dataCadastro: string;
+    nome: string
 }
 
-export interface Produto {
-    id: number;
-    nome: string;
-    descricao: string;
-    quantidade?: number;
-    preco?: number;
+export interface Aluno {
+  id: number
+  nome: string
+  dataCadastro: string
+  vencimento: any
+  status: any
+  email: string,
+  cpf: string
+  telefone: string
 }
 
-export interface Cliente {
-    id: number;
-    nome: string;
-    cpf: string;
-    email: string;
-    telefone: string;
-    dataCadastro: string;
-   
+export interface Role {
+  id: number
+  name: string
+  type: string
 }
-
-
-export interface Pedido {
-    id: number;
-    cliente: Cliente;
-    produtos: Produto[];
-    valorPedido: number;
-    formaPagamento: string;
-    dataPedido: Date;
-    dataHoraSaida: Date;
-    dataHoraChegada: Date;
-    observacao: string;
-}
+  
